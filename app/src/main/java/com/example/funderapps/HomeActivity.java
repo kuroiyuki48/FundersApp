@@ -34,6 +34,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
         ButterKnife.bind(this);
         sharedPrefManager = new SharedPrefManager(this);
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
@@ -50,22 +52,21 @@ public class HomeActivity extends AppCompatActivity {
         finish();
     }
 
-    @OnClick(R.id.btnCekAuth) void cekAuth() {
-//        Toast.makeText(this, sharedPrefManager.getSPToken(), Toast.LENGTH_SHORT).show();
-        Call<User> getUser = apiInterface.getUser(sharedPrefManager.getSPToken());
-        getUser.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                if (response.code() == 200) {
-                    Toast.makeText(HomeActivity.this, response.body().getEmail(), Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-
-            }
-        });
-
-    }
+//    @OnClick(R.id.btnCekAuth) void cekAuth() {
+//        Call<User> getUser = apiInterface.getUser(sharedPrefManager.getSPToken());
+//        getUser.enqueue(new Callback<User>() {
+//            @Override
+//            public void onResponse(Call<User> call, Response<User> response) {
+//                if (response.code() == 200) {
+//                    Toast.makeText(HomeActivity.this, response.body().getEmail(), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<User> call, Throwable t) {
+//                finish();
+//            }
+//        });
+//
+//    }
 }

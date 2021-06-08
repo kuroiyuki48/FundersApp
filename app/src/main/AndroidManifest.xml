@@ -7,7 +7,7 @@
     <application
         android:name=".MyApp"
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/logomark"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -15,7 +15,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="@string/app_name"
             android:theme="@style/Theme.FundersApps.NoActionBar"></activity>
         <activity android:name=".DatasetActivity" />
         <activity android:name=".ProfileActivity" />

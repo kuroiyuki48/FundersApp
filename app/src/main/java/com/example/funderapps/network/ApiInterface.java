@@ -1,8 +1,5 @@
 package com.example.funderapps.network;
 
-import com.example.funderapps.model.Dataset;
-import com.example.funderapps.model.User;
-import com.example.funderapps.model.UserProfile;
 import com.example.funderapps.network.response.RecommendationResp;
 import com.example.funderapps.network.response.UserProfileResponse;
 import com.example.funderapps.network.response.UserResponse;
@@ -21,8 +18,8 @@ public interface ApiInterface {
     Call<UserResponse> postLogin(@Field("email") String email,
                                  @Field("password") String password);
 
-    @GET("api/auth/get_recommendation")
-    Call<RecommendationResp> geRecommendation(@Header("Authorization") String Authorization);
+    @GET("api/auth/recommendation")
+    Call<RecommendationResp> getRecommendation(@Header("Authorization") String Authorization);
 
     @POST("api/auth/refresh_token")
     Call<UserResponse> refreshToken(@Header("Authorization") String Authorization);

@@ -1,9 +1,12 @@
 package com.example.funderapps.network.response;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class UserProfileResponse extends BaseResponse {
+public class RecommendationResult implements Parcelable {
 
     @Expose
     @SerializedName("name") String name;
@@ -104,4 +107,48 @@ public class UserProfileResponse extends BaseResponse {
     public void setRangeEmployee(String range_employee) {
         this.range_employee = this.range_employee;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeValue(this.name);
+        dest.writeValue(this.email);
+        dest.writeValue(this.role);
+        dest.writeValue(this.provinsi);
+        dest.writeValue(this.lokasi);
+        dest.writeValue(this.kategori);
+        dest.writeValue(this.range_fund);
+        dest.writeValue(this.range_employee);
+    }
+
+    public RecommendationResult() {
+    }
+
+    protected RecommendationResult(Parcel in) {
+        this.name = in.readString();
+        this.email = in.readString();
+        this.role = in.readString();
+        this.provinsi = in.readString();
+        this.kabkota = in.readString();
+        this.lokasi = in.readString();
+        this.kategori = in.readString();
+        this.range_fund = in.readString();
+        this.range_employee = in.readString();
+    }
+
+    public static final Creator<RecommendationResult> CREATOR = new Creator<RecommendationResult>() {
+        @Override
+        public RecommendationResult createFromParcel(Parcel in) {
+            return new RecommendationResult(in);
+        }
+
+        @Override
+        public RecommendationResult[] newArray(int size) {
+            return new RecommendationResult[size];
+        }
+    };
 }

@@ -102,12 +102,12 @@
     <string name="register">Daftar</string>
     <string name="action_settings">Profile</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">Funders</string>
+    <string name="second_fragment_label">Funders</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment">Hello Funders</string>
+    <string name="hello_second_fragment">Hello Funders. Arg: %1$s</string>
     <string name="province">Provinsi</string>
     <string name="regency">Kabkota</string>
     <string name="role">Role</string>
@@ -117,5 +117,6 @@
     <string name="kategori">Kategori</string>
     <string name="range_fund">Range Fund</string>
     <string name="range_employee">Range Employee</string>
+    <string name="umkm_list">Daftar UMKM</string>
 
 </resources>

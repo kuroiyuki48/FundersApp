@@ -6,8 +6,6 @@ import com.google.gson.annotations.SerializedName;
 public class UserProfile {
 
     @Expose
-    @SerializedName("token") String token;
-    @Expose
     @SerializedName("name") String name;
     @Expose
     @SerializedName("email") String email;
@@ -17,17 +15,6 @@ public class UserProfile {
     @SerializedName("provinsi") String provinsi;
     @Expose
     @SerializedName("kabkota") String kabkota;
-    @Expose
-    @SerializedName("dataset")
-    Dataset dataset;
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 
     public String getName() {
         return name;
@@ -72,12 +59,4 @@ public class UserProfile {
         this.kabkota = kabkota;
     }
 
-
-    public Dataset getDataset() {
-        return dataset;
-    }
-
-    public void setDataset(Dataset dataset) {
-        this.dataset = dataset;
-    }
 }

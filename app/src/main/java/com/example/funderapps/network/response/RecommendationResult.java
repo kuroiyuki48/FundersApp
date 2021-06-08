@@ -19,6 +19,8 @@ public class RecommendationResult implements Parcelable {
     @Expose
     @SerializedName("kabkota") String kabkota;
     @Expose
+    @SerializedName("no_telp") String no_telp;
+    @Expose
     @SerializedName("lokasi") String lokasi;
     @Expose
     @SerializedName("kategori") String kategori;
@@ -100,6 +102,15 @@ public class RecommendationResult implements Parcelable {
     }
 
 
+    public String getNoTelp() {
+        return no_telp;
+    }
+
+    public void setNoTelp(String no_telp) {
+        this.no_telp = no_telp;
+    }
+
+
     public String getRangeEmployee() {
         return range_employee;
     }
@@ -122,6 +133,7 @@ public class RecommendationResult implements Parcelable {
         dest.writeValue(this.lokasi);
         dest.writeValue(this.kategori);
         dest.writeValue(this.range_fund);
+        dest.writeValue(this.no_telp);
         dest.writeValue(this.range_employee);
     }
 
@@ -137,6 +149,7 @@ public class RecommendationResult implements Parcelable {
         this.lokasi = in.readString();
         this.kategori = in.readString();
         this.range_fund = in.readString();
+        this.no_telp = in.readString();
         this.range_employee = in.readString();
     }
 

@@ -43,6 +43,29 @@
             android:text="@string/funding_category"
             android:textColor="@color/purple_200"/>
 
+<!--        <Button-->
+<!--            android:id="@+id/btnWA"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            -->
+<!--            android:background="@color/design_default_color_secondary_variant"-->
+<!--            android:textColor="@color/white"/>-->
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/btnWA"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@android:drawable/stat_sys_phone_call"
+                android:background="@color/design_default_color_secondary_variant"/>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

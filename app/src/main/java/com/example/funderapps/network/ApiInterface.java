@@ -1,6 +1,10 @@
 package com.example.funderapps.network;
 
+import com.example.funderapps.model.Dataset;
 import com.example.funderapps.model.User;
+import com.example.funderapps.model.UserProfile;
+import com.example.funderapps.network.response.RecommendationResp;
+import com.example.funderapps.network.response.UserProfileResponse;
 import com.example.funderapps.network.response.UserResponse;
 
 import retrofit2.Call;
@@ -17,14 +21,11 @@ public interface ApiInterface {
     Call<UserResponse> postLogin(@Field("email") String email,
                                  @Field("password") String password);
 
-    @GET("api/auth/user_profile")
-    Call<User> getUser(@Header("Authorization") String token);
-
     @GET("api/auth/get_recommendation")
-    Call<User> geRecommendation(@Header("Authorization") String token);
+    Call<RecommendationResp> geRecommendation(@Header("Authorization") String Authorization);
 
     @POST("api/auth/refresh_token")
-    Call<UserResponse> refreshToken(@Header("Authorization") String token);
+    Call<UserResponse> refreshToken(@Header("Authorization") String Authorization);
 
     @POST("api/auth/register")
     Call<UserResponse> postRegister(@Field("name") String name,
@@ -42,10 +43,11 @@ public interface ApiInterface {
                                      @Field("gambar") String gambar);
 
     @POST("api/auth/update_dataset")
-    Call<UserResponse> updateDataset(@Header("Authorization") String token,
+    Call<UserResponse> updateDataset(@Header("Authorization") String Authorization,
                                      @Field("id_kategori") Integer id_kategori,
                                      @Field("id_lokasi") Integer id_lokasi,
                                      @Field("id_range_funds") Integer id_range_funds,
-                                     @Field("id_range_employees") Integer id_range_employees);
-
+                                     @Field("range_employee") Integer id_range_employees);
+    @GET("api/auth/user_profile")
+    Call<UserProfileResponse> getUser(@Header("Authorization") String Authorization);
 }

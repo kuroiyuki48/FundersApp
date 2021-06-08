@@ -102,17 +102,30 @@
         android:text="@string/forget_pass"
         android:layout_marginLeft="5dp" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_marginTop="40dp"
+    <RelativeLayout
+        android:id="@+id/container_all_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:text="@string/sign_in"
-        android:textSize="17sp"
-        android:fontFamily="@font/poppins_bold"
-        android:textAllCaps="false"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+
+        <ImageButton
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/all_btn"
+            android:layout_gravity="center">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/tv_btn_sign_in"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -132,7 +145,7 @@
             android:text="@string/no_account" />
 
         <TextView
-            android:id="@+id/navigate_to_sign_up"
+            android:id="@+id/btnRegister"
             style="@style/H5"
             android:textSize="13sp"
             android:textStyle="bold"

@@ -1,9 +1,172 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bg_detail"
+            android:layout_width="999dp"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_detail" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/btnLogout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logout"
+                android:layout_gravity="end"/>
+
+            <RelativeLayout
+                android:layout_width="307dp"
+                android:layout_height="209dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ellipse_detail" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/item_avatar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/profile_photo_dummy"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvRole"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/role"
+                android:textColor="@color/purple_500"/>
+
+            <TextView
+                android:id="@+id/tvNama"
+                style="@style/H3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/name"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/email"/>
+
+            <TextView
+                android:id="@+id/tvProvinsi"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/province"
+                android:textColor="@color/purple_500"/>
+
+            <TextView
+                android:id="@+id/tvKabkota"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/regency"
+                android:textColor="@color/purple_500" />
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/container_all_btn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="50dp">-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btnLogout"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/all_btn"-->
+<!--                    android:layout_gravity="center">-->
+<!--                </ImageButton>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_btn_logout"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/logout"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:layout_centerInParent="true"/>-->
+<!--            </RelativeLayout>-->
+
+            <TextView
+                style="@style/H3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/dataset"/>
+
+            <TextView
+                android:id="@+id/tvLokasi"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/lokasi"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/tvKategori"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/kategori"/>
+
+            <TextView
+                android:id="@+id/tvRangeFund"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/range_fund"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/tvRangeEmployee"
+                style="@style/H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/range_employee"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

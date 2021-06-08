@@ -13,14 +13,25 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <style name="margin">20dp</style>
+
     <style name="H0">40sp</style>
+
     <style name="H1">30sp</style>
+
     <style name="H2">23sp</style>
+
     <style name="H3">20sp</style>
+
     <style name="H4">15sp</style>
+
     <style name="H5">13sp</style>
+
     <style name="H6">12sp</style>
+
     <style name="activity_horizontal_margin">16dp</style>
+
     <style name="activity_vertical_margin">16dp</style>
+
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

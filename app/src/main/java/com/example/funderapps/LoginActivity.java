@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.funderapps.model.User;
+import com.example.funderapps.model.UserProfile;
 import com.example.funderapps.network.ApiClient;
 import com.example.funderapps.network.ApiInterface;
 import com.example.funderapps.network.response.UserResponse;
@@ -50,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         if (sharedPrefManager.getSPSudahLogin()){
-            startActivity(new Intent(LoginActivity.this, HomeActivity.class)
+            startActivity(new Intent(LoginActivity.this, MainActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
             finish();
         }
@@ -72,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                     sharedPrefManager.saveSPString(SharedPrefManager.SP_EMAIL, user.getEmail());
                     sharedPrefManager.saveSPString(SharedPrefManager.SP_TOKEN, "Bearer " +response.body().getToken());
                     sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
-                    startActivity(new Intent(mContext, HomeActivity.class)
+                    startActivity(new Intent(mContext, MainActivity.class)
                             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                     finish();
                 } else {
@@ -87,8 +88,4 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-//    @OnClick(R.id.btn_register) void register() {
-//        startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-//    }
 }
